@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "H4VRfvHYhdQ=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\tiger\\RiderProjects\\RGU.DistributedSystems.Labs\\RGU.DistributedSystems.Labs.WPF\\RGU.DistributedSystems.Labs.WPF.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tiger\\.nuget\\packages\\dryioc.dll\\6.0.0-preview-08\\dryioc.dll.6.0.0-preview-08.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://www.nuget.org/api/v2'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}

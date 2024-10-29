@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGU.DistributedSystems.Labs.WPF", "RGU.DistributedSystems.Labs.WPF\RGU.DistributedSystems.Labs.WPF.csproj", "{62906652-26F2-408D-893A-B27B5B8DB879}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RGU.DistributedSystems.Labs.WPF.MVVM", "RGU.DistributedSystems.Labs.WPF.MVVM\RGU.DistributedSystems.Labs.WPF.MVVM.csproj", "{3E8B48F0-D9B1-423E-8C22-3915F3AE71BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62906652-26F2-408D-893A-B27B5B8DB879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62906652-26F2-408D-893A-B27B5B8DB879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62906652-26F2-408D-893A-B27B5B8DB879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62906652-26F2-408D-893A-B27B5B8DB879}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E8B48F0-D9B1-423E-8C22-3915F3AE71BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E8B48F0-D9B1-423E-8C22-3915F3AE71BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E8B48F0-D9B1-423E-8C22-3915F3AE71BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E8B48F0-D9B1-423E-8C22-3915F3AE71BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

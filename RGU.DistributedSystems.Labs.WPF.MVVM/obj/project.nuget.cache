@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "cUhN9ANI1go=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\tiger\\RiderProjects\\RGU.DistributedSystems.Labs\\RGU.DistributedSystems.Labs.WPF.MVVM\\RGU.DistributedSystems.Labs.WPF.MVVM.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://www.nuget.org/api/v2'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}

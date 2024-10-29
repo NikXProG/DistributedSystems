@@ -1,0 +1,17 @@
+﻿<Window x:Class="RGU.DistributedSystems.Labs.WPF.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RGU.DistributedSystems.Labs.WPF.View"
+        xmlns:systemWindowsPresentationCore="clr-namespace:System.Windows;assembly=PresentationCore"
+        xmlns:viewModel="clr-namespace:RGU.DistributedSystems.Labs.WPF.MVVM.ViewModel"
+        mc:Ignorable="d"
+        Title="Я ебал собак" 
+        Height="500"
+        Width="500"
+        FontSize="25"
+        Loaded="MainWindow_OnLoaded">
+    <Frame x:Name="_mainWindowMainFrame"
+           NavigationUIVisibility="Hidden" />
+</Window>

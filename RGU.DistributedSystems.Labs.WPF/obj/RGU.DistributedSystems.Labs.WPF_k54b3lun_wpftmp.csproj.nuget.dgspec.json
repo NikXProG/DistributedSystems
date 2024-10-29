@@ -1,0 +1,142 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\tiger\\RiderProjects\\RGU.DistributedSystems.Labs\\RGU.DistributedSystems.Labs.WPF\\RGU.DistributedSystems.Labs.WPF.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\tiger\\RiderProjects\\RGU.DistributedSystems.Labs\\RGU.DistributedSystems.Labs.WPF.MVVM\\RGU.DistributedSystems.Labs.WPF.MVVM.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\tiger\\RiderProjects\\RGU.DistributedSystems.Labs\\RGU.DistributedSystems.Labs.WPF.MVVM\\RGU.DistributedSystems.Labs.WPF.MVVM.csproj",
+        "projectName": "RGU.DistributedSystems.Labs.WPF.MVVM",
+        "projectPath": "C:\\Users\\tiger\\RiderProjects\\RGU.DistributedSystems.Labs\\RGU.DistributedSystems.Labs.WPF.MVVM\\RGU.DistributedSystems.Labs.WPF.MVVM.csproj",
+        "packagesPath": "C:\\Users\\tiger\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tiger\\RiderProjects\\RGU.DistributedSystems.Labs\\RGU.DistributedSystems.Labs.WPF.MVVM\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\tiger\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "http://www.nuget.org/api/v2": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\tiger\\RiderProjects\\RGU.DistributedSystems.Labs\\RGU.DistributedSystems.Labs.WPF\\RGU.DistributedSystems.Labs.WPF.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\tiger\\RiderProjects\\RGU.DistributedSystems.Labs\\RGU.DistributedSystems.Labs.WPF\\RGU.DistributedSystems.Labs.WPF.csproj",
+        "projectName": "RGU.DistributedSystems.Labs.WPF",
+        "projectPath": "C:\\Users\\tiger\\RiderProjects\\RGU.DistributedSystems.Labs\\RGU.DistributedSystems.Labs.WPF\\RGU.DistributedSystems.Labs.WPF.csproj",
+        "packagesPath": "C:\\Users\\tiger\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tiger\\RiderProjects\\RGU.DistributedSystems.Labs\\RGU.DistributedSystems.Labs.WPF\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\tiger\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "http://www.nuget.org/api/v2": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "C:\\Users\\tiger\\RiderProjects\\RGU.DistributedSystems.Labs\\RGU.DistributedSystems.Labs.WPF.MVVM\\RGU.DistributedSystems.Labs.WPF.MVVM.csproj": {
+                "projectPath": "C:\\Users\\tiger\\RiderProjects\\RGU.DistributedSystems.Labs\\RGU.DistributedSystems.Labs.WPF.MVVM\\RGU.DistributedSystems.Labs.WPF.MVVM.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "DryIoc.dll": {
+              "target": "Package",
+              "version": "[6.0.0-preview-08, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

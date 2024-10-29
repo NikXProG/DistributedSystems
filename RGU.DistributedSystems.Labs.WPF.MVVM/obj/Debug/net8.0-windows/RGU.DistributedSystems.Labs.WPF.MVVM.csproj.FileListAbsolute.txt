@@ -1,0 +1,11 @@
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF.MVVM\bin\Debug\net8.0-windows\RGU.DistributedSystems.Labs.WPF.MVVM.deps.json
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF.MVVM\bin\Debug\net8.0-windows\RGU.DistributedSystems.Labs.WPF.MVVM.dll
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF.MVVM\bin\Debug\net8.0-windows\RGU.DistributedSystems.Labs.WPF.MVVM.pdb
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF.MVVM\obj\Debug\net8.0-windows\RGU.DistributedSystems.Labs.WPF.MVVM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF.MVVM\obj\Debug\net8.0-windows\RGU.DistributedSystems.Labs.WPF.MVVM.AssemblyInfoInputs.cache
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF.MVVM\obj\Debug\net8.0-windows\RGU.DistributedSystems.Labs.WPF.MVVM.AssemblyInfo.cs
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF.MVVM\obj\Debug\net8.0-windows\RGU.DistributedSystems.Labs.WPF.MVVM.csproj.CoreCompileInputs.cache
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF.MVVM\obj\Debug\net8.0-windows\RGU.DistributedSystems.Labs.WPF.MVVM.dll
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF.MVVM\obj\Debug\net8.0-windows\refint\RGU.DistributedSystems.Labs.WPF.MVVM.dll
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF.MVVM\obj\Debug\net8.0-windows\RGU.DistributedSystems.Labs.WPF.MVVM.pdb
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF.MVVM\obj\Debug\net8.0-windows\ref\RGU.DistributedSystems.Labs.WPF.MVVM.dll
