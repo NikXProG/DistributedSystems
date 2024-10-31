@@ -1,0 +1,91 @@
+<UserControl x:Class="RGU.DistributedSystems.Labs.WPF.View.UserControls.NumericKeyboard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:RGU.DistributedSystems.Labs.WPF.View.UserControls"
+             xmlns:properties="clr-namespace:RGU.DistributedSystems.Labs.WPF.View.ControlProperties"
+
+             mc:Ignorable="d"
+             d:DesignHeight="225" d:DesignWidth="350">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../Assets/Styles/StylesComponent/ButtonText.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Button Grid.Column="0" Grid.Row="0" Style="{StaticResource CustomButtonStyle}"
+                FontSize="22">
+            1
+        </Button>
+        <Button Grid.Column="1" Grid.Row="0" Style="{StaticResource CustomButtonStyle}"
+                FontSize="22">
+            2
+        </Button>
+        <Button Grid.Column="2" Grid.Row="0" Style="{StaticResource CustomButtonStyle}"
+                FontSize="22"
+                >
+            3
+        </Button>
+        <Button Grid.Column="0" Grid.Row="1" Style="{StaticResource CustomButtonStyle}"
+                FontSize="22">
+            4
+        </Button>
+        <Button Grid.Column="1" Grid.Row="1" Style="{StaticResource CustomButtonStyle}"
+                FontSize="22"
+        >
+            5
+        </Button>
+        <Button Grid.Column="2" Grid.Row="1" Style="{StaticResource CustomButtonStyle}"
+                FontSize="22"
+        >
+            6
+        </Button>
+        <Button Grid.Column="0" Grid.Row="2" Style="{StaticResource CustomButtonStyle}"
+                FontSize="22">
+            7
+        </Button>
+        <Button Grid.Column="1" Grid.Row="2" Style="{StaticResource CustomButtonStyle}"
+                FontSize="22"
+        >
+            8
+        </Button>
+        <Button Grid.Column="2" Grid.Row="2" Style="{StaticResource CustomButtonStyle}"
+                FontSize="22"
+        >
+            9
+        </Button>
+        
+        <Button Grid.Column="0" Grid.Row="3" Style="{StaticResource CustomButtonStyle}">
+            <Image 
+                RenderOptions.BitmapScalingMode="HighQuality"
+                Width="30"
+                Source="https://w7.pngwing.com/pngs/89/437/png-transparent-arrow-back-backspace-delete-erase-remove-minimalisticons-icon-thumbnail.png"></Image>
+        </Button>
+        <Button Grid.Column="1" Grid.Row="3" Style="{StaticResource CustomButtonStyle}"
+                FontSize="22"
+                
+        >
+            0
+        </Button>
+        <Button Grid.Column="2" Grid.Row="3" Style="{StaticResource CustomButtonStyle}"
+                Background="#2078F9"
+                Foreground="White"
+                FontSize="22"
+        >enter</Button>
+    </Grid>
+</UserControl>

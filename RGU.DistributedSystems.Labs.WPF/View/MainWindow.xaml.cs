@@ -1,4 +1,5 @@
 ﻿
+using System.Diagnostics;
 using System.Windows;
 using DryIoc;
 using RGU.DistributedSystems.Labs.WPF.Utils;

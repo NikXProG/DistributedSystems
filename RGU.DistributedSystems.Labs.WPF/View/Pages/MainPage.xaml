@@ -4,21 +4,230 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:RGU.DistributedSystems.Labs.WPF.View.Pages"
+      xmlns:properties="clr-namespace:RGU.DistributedSystems.Labs.WPF.View.ControlProperties"
       xmlns:viewModel="clr-namespace:RGU.DistributedSystems.Labs.WPF.ViewModel"
       xmlns:systemWindowsPresentationCore="clr-namespace:System.Windows;assembly=PresentationCore"
+      xmlns:converters="clr-namespace:RGU.DistributedSystems.Labs.WPF.Converter"
+      xmlns:controls="clr-namespace:RGU.DistributedSystems.Labs.WPF.View.UserControls"
+      xmlns:system="clr-namespace:System;assembly=System.Runtime"
       mc:Ignorable="d"
       Title="MainPage" 
       Height="500"
       Width="500"
-      FontSize="40">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-        </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0"
-            VerticalAlignment="Center" HorizontalAlignment="Center">Я ебал кота</TextBlock>
-        <Button Grid.Row="1"  Content="sdsdsdss">
-        </Button>
-    </Grid>
+      FontSize="40"
+      >
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../Assets/Styles/StylesComponent/ButtonImage.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="../../Assets/Styles/StylesComponent/ButtonText.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="../../Assets/Styles/StylesComponent/ScrollViewer.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    
+    
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition  Width="*"></ColumnDefinition>
+                <ColumnDefinition  Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition  Height="*"></RowDefinition>
+                <RowDefinition  Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+                
+                 
+                <Button Grid.Column="0" 
+                        Grid.Row="0"
+                        Style="{StaticResource CustomButtonStyle}" 
+                        Background="White" 
+                        Foreground="Black" 
+                        FontSize="16">
+                    Нажми на меня
+                </Button>
+            <Button Grid.Column="1"
+                    Grid.Row="0"
+                    Style="{StaticResource ImageButtonStyle}"
+                    BorderBrush="Transparent"
+                    Background="White"
+                    FocusVisualStyle="{x:Null}"
+                    properties:Image.ImageSource="https://cdn-icons-png.flaticon.com/256/2504/2504839.png"
+                    properties:Image.ScaleX="0.5"
+                    properties:Image.ScaleY="0.5"
+                    properties:Image.AlignX="Center"
+                    properties:Image.AlignY="Bottom"
+                    properties:Image.Url="https://telegram.org/"
+                    properties:Border.RadiusCoefficient="1.0"
+              
+            />
+                <Button Grid.Column="1" 
+                        Grid.Row="1"  
+                        Style="{StaticResource ImageButtonStyle}"
+                        BorderBrush="Transparent"
+                       
+                        FocusVisualStyle="{x:Null}"
+                        properties:Image.ImageSource="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/VK_Compact_Logo_%282021-present%29.svg/800px-VK_Compact_Logo_%282021-present%29.svg.png"
+                        properties:Image.ScaleX="0.5"
+                        properties:Image.ScaleY="0.5"
+                        properties:Image.AlignX="Center"
+                        properties:Image.AlignY="Center"
+                        properties:Image.Url="https://telegram.org/"
+                        properties:Border.RadiusCoefficient="1.0"
+                        properties:Border.ScaleMaskCoefficient="1.0"
+                        properties:Border.OverlayMask="True"
+                />
+ 
+                <Button Grid.Column="1"
+                        Grid.Row="2"
+                        Style="{StaticResource ImageButtonStyle}"
+                        BorderBrush="Transparent"
+                        Background="#4DC3E8"
+                        FocusVisualStyle="{x:Null}"
+                        properties:Image.ImageSource="https://img.icons8.com/ios_filled/512/FFFFFF/telegram-app.png"
+                        properties:Image.ScaleX="0.25"
+                        properties:Image.ScaleY="0.25"
+                        properties:Image.AlignX="Center"
+                        properties:Image.AlignY="Center"
+                        properties:Image.Url="https://telegram.org/"
+                        properties:Border.RadiusCoefficient="1.0"
+                        properties:Border.ScaleMaskCoefficient="1.0"
+                        properties:Border.OverlayMask="False"
+              
+                />
+                
+                <controls:NumericKeyboard Grid.Row="0" Grid.Column="2"></controls:NumericKeyboard>
+                
+                <ScrollViewer Grid.Column="2" Grid.Row="1" HorizontalScrollBarVisibility="Visible"
+                              VerticalScrollBarVisibility="Auto">
+                    <StackPanel>
+                                     
+                        <Button Grid.Column="0" 
+                                Grid.Row="0"
+                                Style="{StaticResource CustomButtonStyle}" 
+                                Background="White" 
+                                Foreground="Black" 
+                                FontSize="20">
+                            Нажми на меня
+                        </Button>
+                                     
+                        <Button Grid.Column="0" 
+                                Grid.Row="0"
+                                Style="{StaticResource CustomButtonStyle}" 
+                                Background="White" 
+                                Foreground="Black" 
+                                FontSize="20">
+                            Нажми на меня
+                        </Button>
+                                     
+                        <Button Grid.Column="0" 
+                                Grid.Row="0"
+                                Style="{StaticResource CustomButtonStyle}" 
+                                Background="White" 
+                                Foreground="Black" 
+                                FontSize="20">
+                            Нажми на меня
+                        </Button>
+                            
+                        <Button Grid.Column="0" 
+                                Grid.Row="0"
+                                Style="{StaticResource CustomButtonStyle}" 
+                                Background="White" 
+                                Foreground="Black" 
+                                FontSize="20">
+                            Нажми на меня
+                        </Button>
+                        <Button Grid.Column="0" 
+                                Grid.Row="0"
+                                Style="{StaticResource CustomButtonStyle}" 
+                                Background="White" 
+                                Foreground="Black" 
+                                FontSize="20">
+                            Нажми на меня
+                        </Button>
+                        <Button Grid.Column="0" 
+                                Grid.Row="0"
+                                Style="{StaticResource CustomButtonStyle}" 
+                                Background="White" 
+                                Foreground="Black" 
+                                FontSize="40">
+                            Нажми на меня
+                        </Button>  <Button Grid.Column="0" 
+                                           Grid.Row="0"
+                                           Style="{StaticResource CustomButtonStyle}" 
+                                           Background="White" 
+                                           Foreground="Black" 
+                                           FontSize="40">
+                            Нажми на меня
+                        </Button>
+                        <Button Grid.Column="0" 
+                                Grid.Row="0"
+                                Style="{StaticResource CustomButtonStyle}" 
+                                Background="White" 
+                                Foreground="Black" 
+                                FontSize="40">
+                            Нажми на меня
+                        </Button>
+                        
+                    </StackPanel>
+                </ScrollViewer>
+            
+            
+                <controls:SpinnerDialog Grid.Column="0" Grid.Row="1">
+                </controls:SpinnerDialog>
+            
+                <controls:DialogHost 
+                    OpacityBackground="1.0"
+                    CornerRadiusBackground="30.0"
+                    CornerRadiusForeground="30.0"
+                    BackgroundColor="#5A7FDD"
+                  
+                    Grid.Column="0" 
+                    Grid.Row="2">
+                    <StackPanel Orientation="Vertical" >
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="30"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            
+                            <TextBlock Foreground="White"
+                                Grid.Column="0" 
+                                       TextWrapping="Wrap"
+                                       HorizontalAlignment="Left"
+                                       FontSize="25"
+                                        FontWeight="Medium"
+                                RenderOptions.BitmapScalingMode="HighQuality">
+                                Discord
+                            </TextBlock>
+                            <Image Grid.Column="1" 
+                                Source="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/discord-white-icon.png"
+                                RenderOptions.BitmapScalingMode="HighQuality">
+                                
+                            </Image>
+                            
+                            
+                        </Grid>
+                        <TextBlock  
+                            RenderOptions.BitmapScalingMode="HighQuality"
+                            Foreground="White" FontSize="20">Member Online</TextBlock>
+                        <TextBlock 
+                            RenderOptions.BitmapScalingMode="HighQuality"
+                            Foreground="White" FontSize="23">20</TextBlock>
+                        <TextBlock 
+                            RenderOptions.BitmapScalingMode="HighQuality"
+                            Foreground="White" FontSize="16">learn more about...</TextBlock>
+                        <Button
+                            RenderOptions.BitmapScalingMode="HighQuality"
+                            Background="#7289DA" Foreground="White" FontSize="20">
+                            Join Discord!
+                        </Button>
+                    </StackPanel>
+                </controls:DialogHost>
+
+        </Grid>
+
+    
 </Page>

@@ -3,9 +3,6 @@ C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.
 C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\bin\Debug\net8.0-windows\RGU.DistributedSystems.Labs.WPF.runtimeconfig.json
 C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\bin\Debug\net8.0-windows\RGU.DistributedSystems.Labs.WPF.dll
 C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\bin\Debug\net8.0-windows\RGU.DistributedSystems.Labs.WPF.pdb
-C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\Styles\ButtonImage.baml
-C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\Styles\ButtonText.baml
-C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\Styles\ScrollViewer.baml
 C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\RGU.DistributedSystems.Labs.WPF_MarkupCompile.cache
 C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\RGU.DistributedSystems.Labs.WPF_MarkupCompile.lref
@@ -28,3 +25,15 @@ C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.
 C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\View\Pages\MainPage.g.cs
 C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\View\Pages\MainPage.baml
 C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\RGU.Dist.17F4C09C.Up2Date
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\Assets\Styles\Styles.baml
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\Assets\Styles\StylesComponent\ButtonImage.baml
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\Assets\Styles\StylesComponent\ButtonText.baml
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\Assets\Styles\StylesComponent\ScrollViewer.baml
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\RGU.DistributedSystems.Labs.WPF.sourcelink.json
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\View\UserControls\DialogHost.g.cs
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\View\UserControls\DialogHost.baml
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\View\UserControls\SpinnerDialog.g.cs
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\View\UserControls\SpinnerDialog.baml
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\View\UserControls\NumericKeyboard.g.cs
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\View\UserControls\NumericKeyboard.baml

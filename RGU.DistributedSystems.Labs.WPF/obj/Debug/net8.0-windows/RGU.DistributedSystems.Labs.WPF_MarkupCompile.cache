@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\App.xaml
-5-1582454616
+101239778517
 
-9912704552
+181522809316
 200-2145673825
-Styles\ButtonImage.xaml;Styles\ButtonText.xaml;Styles\ScrollViewer.xaml;View\MainWindow.xaml;View\Pages\MainPage.xaml;
+Assets\Styles\Styles.xaml;Assets\Styles\StylesComponent\ButtonImage.xaml;Assets\Styles\StylesComponent\ButtonText.xaml;Assets\Styles\StylesComponent\ScrollViewer.xaml;View\MainWindow.xaml;View\Pages\MainPage.xaml;View\UserControls\DialogHost.xaml;View\UserControls\LetterKeyboard.xaml;View\UserControls\NumericKeyboard.xaml;View\UserControls\SpinnerDialog.xaml;
 
-False
+True
 

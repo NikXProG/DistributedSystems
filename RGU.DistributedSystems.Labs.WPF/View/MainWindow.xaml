@@ -8,10 +8,139 @@
         xmlns:viewModel="clr-namespace:RGU.DistributedSystems.Labs.WPF.MVVM.ViewModel"
         mc:Ignorable="d"
         Title="Я ебал собак" 
-        Height="500"
+        Height="530"
         Width="500"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True"
+        WindowStyle="None"
         FontSize="25"
         Loaded="MainWindow_OnLoaded">
-    <Frame x:Name="_mainWindowMainFrame"
-           NavigationUIVisibility="Hidden" />
+    
+    <Window.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+                <ResourceDictionary Source="../Assets/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    <Border
+        Background="White"
+        CornerRadius="8" BorderBrush="#DBDBDB"
+        BorderThickness="0.5">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="45" />
+                    <ColumnDefinition Width="45" />
+                    <ColumnDefinition Width="45" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0"
+                            Orientation="Horizontal"
+                            VerticalAlignment="Center">
+
+                    <Image
+                        Source="../Assets/icon.ico"
+                        Height="18" Width="18"
+                        Margin="10,0,7,0" >
+                        <RenderOptions.BitmapScalingMode>
+                            <BitmapScalingMode>HighQuality</BitmapScalingMode>
+                        </RenderOptions.BitmapScalingMode>
+                    </Image>
+
+
+                    <TextBlock Text="NotionWPF" x:Name="ApplicationTitle" VerticalAlignment="Center" />
+                </StackPanel>
+
+                <Button
+                    Grid.Column="1"
+                    ToolTip="Свернуть"
+                    FontSize="14"
+                 
+                    VerticalContentAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    BorderBrush="Transparent"
+                    >
+
+                    <Button.ContentTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="🗕" RenderTransformOrigin="0.5,0.5">
+                                <TextBlock.RenderTransform>
+                                    <TranslateTransform Y="-5" />
+                                </TextBlock.RenderTransform>
+                            </TextBlock>
+                        </DataTemplate>
+                    </Button.ContentTemplate>
+                </Button>
+                <Button
+                    Grid.Column="2"
+                    ToolTip="Развернуть"
+                    Content="🗖"
+              
+                    FontSize="14"
+                    >
+                    <Button.ContentTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="🗖" RenderTransformOrigin="0.5,0.5">
+                                <TextBlock.RenderTransform>
+                                    <TranslateTransform Y="-1" />
+                                </TextBlock.RenderTransform>
+                            </TextBlock>
+                        </DataTemplate>
+                    </Button.ContentTemplate>
+                </Button>
+                <Button
+
+                    BorderThickness="0"
+                    FontFamily="Montserrat"
+                    Grid.Column="3"
+                    Content="✕"
+                    FontSize="14"
+                    ToolTip="Закрыть">
+
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="Foreground" Value="#545454" />
+                            <Setter Property="FontFamily" Value="Montserrat" />
+                            <Setter Property="FontSize" Value="16" />
+                            <Setter Property="BorderThickness" Value="0" />
+                            <Setter Property="OverridesDefaultStyle" Value="True" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border x:Name="Border"
+                                                Background="{TemplateBinding Background}"
+                                                CornerRadius="0,8,0,0"
+                                                BorderBrush="{TemplateBinding BorderBrush}"
+                                                BorderThickness="{TemplateBinding BorderThickness}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Foreground" Value="#FFFFFF" />
+                                                <Setter TargetName="Border" Property="Background" Value="#C42B1C" />
+                                                <Setter TargetName="Border" Property="CornerRadius" Value="0,8,0,0" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Grid>
+            <Frame Grid.Row="1" x:Name="_mainWindowMainFrame"
+                   NavigationUIVisibility="Hidden" />
+        </Grid>
+    </Border>
 </Window>

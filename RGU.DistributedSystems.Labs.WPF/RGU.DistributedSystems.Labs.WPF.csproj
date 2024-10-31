@@ -14,6 +14,21 @@
         <XamlRuntime>Wpf</XamlRuntime>
         <SubType>Designer</SubType>
       </Page>
+      <Page Update="Assets\Styles\StylesComponent\ButtonImage.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="Assets\Styles\StylesComponent\ButtonText.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="Assets\Styles\StylesComponent\ScrollViewer.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
     </ItemGroup>
 
     <ItemGroup>
@@ -25,7 +40,15 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Assets\Images\" />
+      <None Remove="Assets\AppIcon.ico" />
+      <None Remove="Assets\Images\image.jpg" />
+      <Resource Include="Assets\Images\image.jpg" />
+      <None Remove="View\Pages\w.jpg" />
+      <Resource Include="View\Pages\w.jpg" />
+      <None Remove="Assets\Images\button_image.jpg" />
+      <Resource Include="Assets\Images\button_image.jpg" />
+      <None Remove="Assets\Images\button_image.png" />
+      <Resource Include="Assets\Images\button_image.png" />
     </ItemGroup>
 
 </Project>
