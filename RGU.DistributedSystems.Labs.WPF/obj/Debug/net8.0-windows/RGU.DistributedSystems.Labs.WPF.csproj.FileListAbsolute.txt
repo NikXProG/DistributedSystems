@@ -37,3 +37,9 @@ C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.
 C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\View\UserControls\SpinnerDialog.baml
 C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\View\UserControls\NumericKeyboard.g.cs
 C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\View\UserControls\NumericKeyboard.baml
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\View\UserControls\LetterKeyboard.g.cs
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\View\UserControls\LetterKeyboard.baml
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\View\UserControls\Widget.g.cs
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\View\UserControls\Widget.baml
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\View\UserControls\TextBoxKeyboard.g.cs
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF\obj\Debug\net8.0-windows\View\UserControls\TextBoxKeyboard.baml

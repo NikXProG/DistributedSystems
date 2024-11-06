@@ -4,9 +4,288 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:RGU.DistributedSystems.Labs.WPF.View.UserControls"
+             xmlns:properties="clr-namespace:RGU.DistributedSystems.Labs.WPF.View.Properties"
+             xmlns:viewModel="clr-namespace:RGU.DistributedSystems.Labs.WPF.View.UserControls.UserControlViewModel"
              mc:Ignorable="d"
-             d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-        
+             d:DesignHeight="805" d:DesignWidth="2043">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../Assets/Styles/StylesComponent/ButtonText.xaml"></ResourceDictionary>
+                
+            </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="KeyboardCharacterStyle" 
+                   TargetType="Button"
+                   BasedOn="{StaticResource CustomButtonStyle}">
+                <Setter Property="Background" Value="White"></Setter>
+                <Setter Property="Foreground" Value="Black"></Setter>
+                <Setter Property="Margin" Value="4,0" />
+                <Setter Property="FontSize" Value="22"></Setter>
+                <Setter Property="properties:Border.CornerRadius" Value="5.0"></Setter>
+                
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid Background="#CACDD2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!-- <Grid -->
+        <!--     Margin="0,10" -->
+        <!--     Grid.Row="0"> -->
+        <!--     <Grid.ColumnDefinitions> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--     </Grid.ColumnDefinitions> -->
+        <!--      -->
+        <!--     <Button  Grid.Column="0"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         q -->
+        <!--     </Button> -->
+        <!--     <Button  Grid.Column="1"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         w -->
+        <!--     </Button> -->
+        <!--     <Button  Grid.Column="2"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         e -->
+        <!--     </Button>    -->
+        <!-- -->
+        <!--     <Button  Grid.Column="3"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--        t -->
+        <!--     </Button> -->
+        <!--     <Button  Grid.Column="4"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         y -->
+        <!--     </Button> -->
+        <!--     <Button  Grid.Column="5"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         u -->
+        <!--     </Button> -->
+        <!--     <Button  Grid.Column="6"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         i -->
+        <!--     </Button> -->
+        <!--     <Button  Grid.Column="7"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         o -->
+        <!--     </Button> -->
+        <!--     <Button  Grid.Column="8"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         p -->
+        <!--     </Button> -->
+        <!--      -->
+        <!--      -->
+        <!--     <Button Grid.Column="9" Style="{StaticResource KeyboardCharacterStyle}" -->
+        <!--     Background="#9FA6AE" -->
+        <!--     > -->
+        <!--         ⌫ -->
+        <!--      -->
+        <!--     </Button> -->
+        <!-- </Grid> -->
+        <Grid
+            Margin="0,10"
+            Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1.5*"/>
+            </Grid.ColumnDefinitions>
+            
+
+            <Button  Grid.Column="1" 
+                     Style="{StaticResource KeyboardCharacterStyle}"
+                     Command="{Binding AddCharacterCommand, Mode=OneWay}"
+                     CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}">
+                a 
+            </Button>
+            
+        </Grid>
+        <!--     <Button  Grid.Column="2"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         s -->
+        <!--     </Button> -->
+        <!--     <Button  Grid.Column="3"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         d -->
+        <!--     </Button>    -->
+        <!-- -->
+        <!--     <Button  Grid.Column="4"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--        f -->
+        <!--     </Button> -->
+        <!--     <Button  Grid.Column="5"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         g -->
+        <!--     </Button> -->
+        <!--     <Button  Grid.Column="6"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--        h -->
+        <!--     </Button> -->
+        <!--     <Button  Grid.Column="7"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         j -->
+        <!--     </Button> -->
+        <!--     <Button  Grid.Column="8"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         k -->
+        <!--     </Button> -->
+        <!--     <Button  Grid.Column="9"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         l -->
+        <!--     </Button> -->
+        <!--      -->
+        <!--      -->
+        <!--     <Button Grid.Column="10" Style="{StaticResource KeyboardCharacterStyle}" -->
+        <!--     Background="#9FA6AE" -->
+        <!--     > -->
+        <!--         return -->
+        <!--          -->
+        <!--     </Button> -->
+        <!-- </Grid> -->
+        <!--               <Grid -->
+        <!--     Margin="0,10" -->
+        <!--     Grid.Row="2"> -->
+        <!--     <Grid.ColumnDefinitions> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--         <ColumnDefinition Width="1.25*"/> -->
+        <!--     </Grid.ColumnDefinitions> -->
+        <!--      -->
+        <!--     <Button -->
+        <!--                     Background="#9FA6AE" -->
+        <!--         Grid.Column="0"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         ⇧  -->
+        <!--     </Button> -->
+        <!--     <Button  Grid.Column="1"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         z -->
+        <!--     </Button> -->
+        <!--     <Button  Grid.Column="2"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         x -->
+        <!--     </Button>    -->
+        <!-- -->
+        <!--     <Button  Grid.Column="3"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--        c -->
+        <!--     </Button> -->
+        <!--     <Button  Grid.Column="4"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         v -->
+        <!--     </Button> -->
+        <!--     <Button  Grid.Column="5"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--        b -->
+        <!--     </Button> -->
+        <!--     <Button  Grid.Column="6"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         n -->
+        <!--     </Button> -->
+        <!--     <Button  Grid.Column="7"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         m -->
+        <!--     </Button> -->
+        <!--     <Button  Grid.Column="8"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         ! -->
+        <!--     </Button> -->
+        <!--      -->
+        <!--       <Button  Grid.Column="9"  -->
+        <!--                Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--           ? -->
+        <!--       </Button> -->
+        <!-- -->
+        <!--     <Button Grid.Column="10" Style="{StaticResource KeyboardCharacterStyle}" -->
+        <!--     Background="#9FA6AE" -->
+        <!--     > -->
+        <!--         ⇧ -->
+        <!--          -->
+        <!--     </Button> -->
+        <!-- </Grid> -->
+        <!--                       <Grid -->
+        <!--     Margin="0,10" -->
+        <!--     Grid.Row="3"> -->
+        <!--     <Grid.ColumnDefinitions> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--         <ColumnDefinition Width="*"/> -->
+        <!--         <ColumnDefinition Width="6*"/> -->
+        <!--         <ColumnDefinition Width="1.25*"/> -->
+        <!--         <ColumnDefinition Width="0.75*"/> -->
+        <!--     </Grid.ColumnDefinitions> -->
+        <!--      -->
+        <!--     <Button -->
+        <!--                     Background="#9FA6AE" -->
+        <!--         Grid.Column="0"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         123 -->
+        <!--     </Button> -->
+        <!--     <Button  -->
+        <!--         Background="#9FA6AE" -->
+        <!--         Grid.Column="1"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         🌐  -->
+        <!--     </Button> -->
+        <!--     <Button  -->
+        <!--         Background="#9FA6AE" -->
+        <!--         Grid.Column="2"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         🎙 -->
+        <!--     </Button>    -->
+        <!-- -->
+        <!--     <Button  Grid.Column="3"  -->
+        <!--              Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--         -->
+        <!--     </Button> -->
+        <!-- -->
+        <!--      -->
+        <!--     <Button  -->
+        <!--           Command="{Binding AddCharacter}"  -->
+        <!--           Background="#9FA6AE" -->
+        <!--           Grid.Column="4"  -->
+        <!--           Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--           123 -->
+        <!--       </Button> -->
+        <!--       <Button  -->
+        <!--           Background="#9FA6AE" -->
+        <!--           Grid.Column="5"  -->
+        <!--           Style="{StaticResource KeyboardCharacterStyle}"> -->
+        <!--           ⌨ -->
+        <!--     </Button>    -->
+        <!-- -->
+        <!-- -->
+        <!-- -->
+        <!--                            -->
+        <!-- </Grid> -->
     </Grid>
 </UserControl>

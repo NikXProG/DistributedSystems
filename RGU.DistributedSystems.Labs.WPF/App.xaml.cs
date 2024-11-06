@@ -104,12 +104,14 @@ public partial class App : Application
         // TODO: REGISTER PAGES VIEW MODEL IN DI CONTAINER
         return this;
     }
+    
     private App RegisterDialogsViewModels()
     {
         // TODO: 
 
         return this;
     }
+    
     private App RegisterViewModels()
     {
         return RegisterWindowsViewModels()
