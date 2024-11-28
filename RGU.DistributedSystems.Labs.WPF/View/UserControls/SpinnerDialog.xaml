@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:RGU.DistributedSystems.Labs.WPF.View.UserControls"
+             xmlns:viewControls="clr-namespace:RGU.DistributedSystems.Labs.WPF.View.UserControls"
              mc:Ignorable="d"
              d:DesignHeight="300" d:DesignWidth="300">
         <Grid>
@@ -12,15 +13,30 @@
             <local:DialogHost 
                 CornerRadiusBackground="30.0"
                 CornerRadiusForeground="30.0">
-                <StackPanel VerticalAlignment="Center">
-                    <TextBlock 
-                        TextWrapping="Wrap"
-                        FontSize="16"
-                        HorizontalAlignment="Center">Здесь типо спиннер Ильи...</TextBlock>
-                    <TextBlock
-                        FontSize="16"
-                        HorizontalAlignment="Center">Please, wait...</TextBlock>
-                </StackPanel>
+
+                    
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition  Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <viewControls:AspectRatioLayoutDecorator
+                            Grid.Row="0"
+                            AspectRatio="1.0"
+                        >
+                            <viewControls:Spinner
+
+                                ItemsCount="8"
+                                ItemsBrush="CadetBlue"
+                                Direction="Clockwise"
+                                RadiusCoefficient="0.12" />
+                        </viewControls:AspectRatioLayoutDecorator>
+                        
+                        <TextBlock Grid.Row="1"
+                            FontSize="22"
+                            HorizontalAlignment="Center">Please, wait...</TextBlock>
+                    </Grid>
+  
             </local:DialogHost>
         
         

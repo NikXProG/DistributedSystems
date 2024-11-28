@@ -4,30 +4,27 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:RGU.DistributedSystems.Labs.WPF.View.Pages"
-      xmlns:properties="clr-namespace:RGU.DistributedSystems.Labs.WPF.View.Properties"
       xmlns:viewModel="clr-namespace:RGU.DistributedSystems.Labs.WPF.ViewModel"
       xmlns:systemWindowsPresentationCore="clr-namespace:System.Windows;assembly=PresentationCore"
       xmlns:converters="clr-namespace:RGU.DistributedSystems.Labs.WPF.Converter"
       xmlns:controls="clr-namespace:RGU.DistributedSystems.Labs.WPF.View.UserControls"
       xmlns:system="clr-namespace:System;assembly=System.Runtime"
+      xmlns:attachedProperties="clr-namespace:RGU.DistributedSystems.Labs.WPF.View.AttachedProperties"
       mc:Ignorable="d"
       Title="MainPage" 
-      Height="1000"
-      Width="1000"
-      FontSize="40"
+      Background="White"
       >
     <Page.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="../../Assets/Styles/StylesComponent/ButtonImage.xaml"></ResourceDictionary>
-                <ResourceDictionary Source="../../Assets/Styles/StylesComponent/ButtonText.xaml"></ResourceDictionary>
-                <ResourceDictionary Source="../../Assets/Styles/StylesComponent/ScrollViewer.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="../../ResourceDictionaries/ButtonImage.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="../../ResourceDictionaries/ButtonText.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="../../ResourceDictionaries/ScrollViewer.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Page.Resources>
-    
-    
-        <Grid >
+  <Grid >
+            
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition  Width="*"></ColumnDefinition>
@@ -49,30 +46,29 @@
                     BorderBrush="Transparent"
                     Background="White"
                     FocusVisualStyle="{x:Null}"
-                    properties:Image.ImageSource="https://cdn-icons-png.flaticon.com/256/2504/2504839.png"
-                    properties:Image.ScaleX="0.5"
-                    properties:Image.ScaleY="0.5"
-                    properties:Image.AlignX="Center"
-                    properties:Image.AlignY="Bottom"
-                    properties:Image.Url="https://telegram.org/"
-                    properties:Border.RadiusCoefficient="1.0"
+                    attachedProperties:Image.ImageSource="https://cdn-icons-png.flaticon.com/256/2504/2504839.png"
+                    attachedProperties:Image.ScaleX="0.5"
+                    attachedProperties:Image.ScaleY="0.5"
+                    attachedProperties:Image.AlignX="Center"
+                    attachedProperties:Image.AlignY="Bottom"
+                    attachedProperties:Image.Url="https://telegram.org/"
+                    attachedProperties:Border.RadiusCoefficient="1.0"
               
             />
                 <Button Grid.Column="1" 
                         Grid.Row="1"  
                         Style="{StaticResource ImageButtonStyle}"
                         BorderBrush="Transparent"
-                       
                         FocusVisualStyle="{x:Null}"
-                        properties:Image.ImageSource="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/VK_Compact_Logo_%282021-present%29.svg/800px-VK_Compact_Logo_%282021-present%29.svg.png"
-                        properties:Image.ScaleX="0.5"
-                        properties:Image.ScaleY="0.5"
-                        properties:Image.AlignX="Center"
-                        properties:Image.AlignY="Center"
-                        properties:Image.Url="https://telegram.org/"
-                        properties:Border.RadiusCoefficient="1.0"
-                        properties:Border.ScaleMaskCoefficient="1.0"
-                        properties:Border.OverlayMask="True"
+                        attachedProperties:Image.ImageSource="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/VK_Compact_Logo_%282021-present%29.svg/800px-VK_Compact_Logo_%282021-present%29.svg.png"
+                        attachedProperties:Image.ScaleX="0.5"
+                        attachedProperties:Image.ScaleY="0.5"
+                        attachedProperties:Image.AlignX="Center"
+                        attachedProperties:Image.AlignY="Center"
+                        attachedProperties:Image.Url="https://telegram.org/"
+                        attachedProperties:Border.RadiusCoefficient="1.0"
+                        attachedProperties:Border.ScaleMaskCoefficient="1.0"
+                        attachedProperties:Border.OverlayMask="True"
                 />
  
                 <Button Grid.Column="0" 
@@ -80,10 +76,10 @@
                         Style="{StaticResource CustomButtonStyle}" 
                         Background="White" 
                         Foreground="Black" 
-                        properties:Border.CornerRadius="30.0"
+                        attachedProperties:Border.CornerRadius="30.0"
                         BorderBrush="Black"
                         BorderThickness="2"
-                        FontWeight="Black"
+                        FontWeight="Medium"
                         >
                     какая-то хуйня
                 </Button>
@@ -106,7 +102,14 @@
                 <!-- -->
                 <!-- /> -->
                 
-                <controls:NumericKeyboard Grid.Row="0" Grid.Column="2"></controls:NumericKeyboard>
+                <controls:TextBoxNumericKeyboard Grid.Row="0" Grid.Column="2"
+                                                 KeyPaddingKeyboard="30,15"
+                                                 ColumnSpacingKeyboard="0"
+                                                 RowSpacingKeyboard="0"
+                                                 TextValue="{Binding  TextNumericKeyboardValue, Mode=TwoWay}"
+                                                 VerticalAlignment="Bottom"
+                                                 />
+
                 
                 <ScrollViewer Grid.Column="2" Grid.Row="1" HorizontalScrollBarVisibility="Visible"
                               VerticalScrollBarVisibility="Auto">
@@ -187,18 +190,31 @@
             
                 <controls:SpinnerDialog Grid.Column="0" Grid.Row="1"/>
             
-                <controls:Widget Grid.Column="0" Grid.Row="2"/>
-            
-                <controls:TextBoxKeyboard 
-                    Grid.Column="1"
-                    Grid.ColumnSpan="2" 
+                <controls:WidgetDialog
+                    Grid.Column="0"
                     Grid.Row="2"
-                    TextValue="SD;SKDSDKSLDSL"
-                    SelectedValue="SDSDSDSSDS"
-                    CaretPosition="ASDSADSADS"
-                    >
+                    ButtonCommand="{Binding ButtonClickCommand, Mode=OneWay}"
+                />
+
+ 
+              
                     
-                </controls:TextBoxKeyboard>
+            
+            
+                <controls:TextBoxLetterKeyboard
+                    VerticalAlignment="Bottom"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="2"
+                
+                    KeyboardVisible="True"
+                    TextValue="{Binding  TextLetterKeyboardValue, Mode=TwoWay}"
+                    ColumnSpacingKeyboard="0,8"
+                    RowSpacingKeyboard="4,0"
+                    KeyPaddingKeyboard="10,12"
+                    BackgroundKeyKeyboard="White"
+                    ForegroundKeyKeyboard="Black"
+                    FontSizeKeyKeyboard="22"/>
             
                 <!-- <Grid Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2"> -->
                 <!--     <Grid.RowDefinitions> -->
@@ -221,6 +237,8 @@
               
             
         </Grid>
+
+      
 
     
 </Page>

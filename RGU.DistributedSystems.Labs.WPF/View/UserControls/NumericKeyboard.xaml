@@ -4,15 +4,36 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:RGU.DistributedSystems.Labs.WPF.View.UserControls"
-             xmlns:properties="clr-namespace:RGU.DistributedSystems.Labs.WPF.View.Properties"
-
+             x:Name="Keyboard"
              mc:Ignorable="d"
              d:DesignHeight="225" d:DesignWidth="350">
     <UserControl.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="../../Assets/Styles/StylesComponent/ButtonText.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="../../ResourceDictionaries/ButtonText.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
+            <Style TargetType="Viewbox">
+                <Setter Property="Width" Value="20"/>
+                <Setter Property="Height" Value="20"/>
+            </Style>
+
+            <Style TargetType="Path">
+                <Setter Property="Fill" Value="Black"/>
+            </Style>
+
+            <Style x:Key="KeyboardCharacterStyle" 
+                   TargetType="Button"
+                   BasedOn="{StaticResource CustomButtonStyle}">
+                <!-- <Setter Property="Background" Value="{Binding BackgroundKey, ElementName=Keyboard}"></Setter> -->
+                <!-- <Setter Property="Foreground" Value="{Binding ForegroundKey, ElementName=Keyboard}"></Setter> -->
+                <Setter Property="Margin" Value="{Binding RowSpacing, ElementName=Keyboard}" />
+                <Setter Property="FontSize" Value="{Binding FontSizeKey, ElementName=Keyboard}"></Setter>
+                <Setter Property="Padding" Value="{Binding KeyPadding, ElementName=Keyboard}"></Setter>
+                <Setter Property="Focusable" Value="False"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Height" Value="Auto"/>
+                <Setter Property="Width" Value="Auto" />
+            </Style>
         </ResourceDictionary>
     </UserControl.Resources>
     <Grid>
@@ -28,64 +49,89 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         
-        <Button Grid.Column="0" Grid.Row="0" Style="{StaticResource CustomButtonStyle}"
+        <Button Grid.Column="0" Grid.Row="0" Style="{StaticResource KeyboardCharacterStyle}"
+                Command="{Binding Path=InputKeyNumericCommand}"
+                CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}"
                 FontSize="22">
             1
         </Button>
-        <Button Grid.Column="1" Grid.Row="0" Style="{StaticResource CustomButtonStyle}"
+        <Button Grid.Column="1" Grid.Row="0" Style="{StaticResource KeyboardCharacterStyle}"
+                Command="{Binding Path=InputKeyNumericCommand}"
+                CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}"
                 FontSize="22">
             2
         </Button>
-        <Button Grid.Column="2" Grid.Row="0" Style="{StaticResource CustomButtonStyle}"
+        <Button Grid.Column="2" Grid.Row="0" Style="{StaticResource KeyboardCharacterStyle}"
+                Command="{Binding Path=InputKeyNumericCommand}"
+                CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}"
                 FontSize="22"
                 >
             3
         </Button>
-        <Button Grid.Column="0" Grid.Row="1" Style="{StaticResource CustomButtonStyle}"
+        <Button Grid.Column="0" Grid.Row="1" Style="{StaticResource KeyboardCharacterStyle}"
+                Command="{Binding Path=InputKeyNumericCommand}"
+                CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}"
                 FontSize="22">
             4
         </Button>
-        <Button Grid.Column="1" Grid.Row="1" Style="{StaticResource CustomButtonStyle}"
+        <Button Grid.Column="1" Grid.Row="1" Style="{StaticResource KeyboardCharacterStyle}"
+                Command="{Binding Path=InputKeyNumericCommand}"
+                CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}"
                 FontSize="22"
         >
             5
         </Button>
-        <Button Grid.Column="2" Grid.Row="1" Style="{StaticResource CustomButtonStyle}"
+        <Button Grid.Column="2" Grid.Row="1" Style="{StaticResource KeyboardCharacterStyle}"
+                Command="{Binding Path=InputKeyNumericCommand}"
+                CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}"
                 FontSize="22"
         >
             6
         </Button>
-        <Button Grid.Column="0" Grid.Row="2" Style="{StaticResource CustomButtonStyle}"
+        <Button Grid.Column="0" Grid.Row="2" Style="{StaticResource KeyboardCharacterStyle}"
+                Command="{Binding Path=InputKeyNumericCommand}"
+                CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}"
                 FontSize="22">
             7
         </Button>
-        <Button Grid.Column="1" Grid.Row="2" Style="{StaticResource CustomButtonStyle}"
+        <Button Grid.Column="1" Grid.Row="2" Style="{StaticResource KeyboardCharacterStyle}"
+                Command="{Binding Path=InputKeyNumericCommand}"
+                CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}"
                 FontSize="22"
         >
             8
         </Button>
-        <Button Grid.Column="2" Grid.Row="2" Style="{StaticResource CustomButtonStyle}"
+        <Button Grid.Column="2" Grid.Row="2" Style="{StaticResource KeyboardCharacterStyle}"
+                Command="{Binding Path=InputKeyNumericCommand}"
+                CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}"
                 FontSize="22"
         >
             9
         </Button>
         
-        <Button Grid.Column="0" Grid.Row="3" Style="{StaticResource CustomButtonStyle}">
-            <Image 
-                RenderOptions.BitmapScalingMode="HighQuality"
-                Width="30"
-                Source="https://w7.pngwing.com/pngs/89/437/png-transparent-arrow-back-backspace-delete-erase-remove-minimalisticons-icon-thumbnail.png"></Image>
+        <Button Grid.Column="0" Grid.Row="3" Style="{StaticResource KeyboardCharacterStyle}"
+                Command="{Binding Path=RemoveKeyCommand}"
+                >
+            <Viewbox>
+                <Canvas Width="24" Height="24">
+                    <Path Data="M19,15.59L17.59,17L14,13.41L10.41,17L9,15.59L12.59,12L9,8.41L10.41,7L14,10.59L17.59,7L19,8.41L15.41,12L19,15.59M22,3A2,2 0 0,1 24,5V19A2,2 0 0,1 22,21H7C6.31,21 5.77,20.64 5.41,20.11L0,12L5.41,3.88C5.77,3.35 6.31,3 7,3H22M22,5H7L2.28,12L7,19H22V5Z">
+                    </Path>
+                </Canvas>
+            </Viewbox>
         </Button>
-        <Button Grid.Column="1" Grid.Row="3" Style="{StaticResource CustomButtonStyle}"
+        <Button Grid.Column="1" Grid.Row="3" Style="{StaticResource KeyboardCharacterStyle}"
                 FontSize="22"
+                Command="{Binding Path=InputKeyNumericCommand}"
+                CommandParameter="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Content}"
                 
         >
             0
         </Button>
-        <Button Grid.Column="2" Grid.Row="3" Style="{StaticResource CustomButtonStyle}"
+        <Button Grid.Column="2" Grid.Row="3" Style="{StaticResource KeyboardCharacterStyle}"
                 Background="#2078F9"
                 Foreground="White"
                 FontSize="22"
-        >enter</Button>
+        >enter
+        </Button>
     </Grid>
 </UserControl>

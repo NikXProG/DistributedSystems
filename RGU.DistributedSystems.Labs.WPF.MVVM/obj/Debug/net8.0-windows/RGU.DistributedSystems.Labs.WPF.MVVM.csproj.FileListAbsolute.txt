@@ -10,3 +10,4 @@ C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.
 C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF.MVVM\obj\Debug\net8.0-windows\RGU.DistributedSystems.Labs.WPF.MVVM.pdb
 C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF.MVVM\obj\Debug\net8.0-windows\ref\RGU.DistributedSystems.Labs.WPF.MVVM.dll
 C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF.MVVM\obj\Debug\net8.0-windows\RGU.DistributedSystems.Labs.WPF.MVVM.sourcelink.json
+C:\Users\tiger\RiderProjects\RGU.DistributedSystems.Labs\RGU.DistributedSystems.Labs.WPF.MVVM\obj\Debug\net8.0-windows\RGU.DistributedSystems.Labs.WPF.MVVM.csproj.AssemblyReference.cache

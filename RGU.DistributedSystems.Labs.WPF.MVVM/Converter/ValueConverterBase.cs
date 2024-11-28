@@ -64,7 +64,7 @@ public abstract class ValueConverterBase<TValueConverter>:
         CultureInfo culture);
     
     /// <inheritdoc cref="IMultiValueConverter.ConvertBack" />
-    public virtual object ConvertBack(
+    public virtual object? ConvertBack(
         object? value,
         Type targetType,
         object? parameter,

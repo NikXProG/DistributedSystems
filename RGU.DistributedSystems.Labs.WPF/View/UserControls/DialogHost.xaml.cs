@@ -8,6 +8,7 @@ namespace RGU.DistributedSystems.Labs.WPF.View.UserControls;
 
 //для замены cвойства content надо юзать атрибуты
 [ContentProperty("InnerContent")]
+
 public partial class DialogHost : UserControl
 {
     public DialogHost()
@@ -24,6 +25,16 @@ public partial class DialogHost : UserControl
             SetValue(  OpacityBackgroundProperty, value);
     }
     
+    public Thickness MarginContent
+    {
+        get =>
+            (Thickness)GetValue(MarginContentProperty);
+        
+        set =>
+            SetValue(  MarginContentProperty, value);
+    }
+
+  
     public CornerRadius CornerRadiusBackground
     {
         get =>
@@ -37,7 +48,6 @@ public partial class DialogHost : UserControl
     {
         get =>
             (CornerRadius)GetValue( CornerRadiusForegroundProperty);
-        
         set =>
             SetValue( CornerRadiusForegroundProperty, value);
     }
@@ -68,7 +78,10 @@ public partial class DialogHost : UserControl
      public static readonly DependencyProperty BackgroundColorProperty = 
          DependencyProperty.Register(nameof(BackgroundColor), typeof(SolidColorBrush), 
              typeof(DialogHost), new PropertyMetadata(Brushes.White));
-
+     
+     public static readonly DependencyProperty MarginContentProperty = 
+         DependencyProperty.Register(nameof(MarginContent), typeof(Thickness), 
+             typeof(DialogHost), new PropertyMetadata(default(Thickness)));
      
     public static readonly DependencyProperty OpacityBackgroundProperty = 
         DependencyProperty.Register(nameof(Opacity), typeof(double), 

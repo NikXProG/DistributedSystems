@@ -15,7 +15,6 @@ public partial class MainPage : Page
         InitializeComponent();
         
         DataContext = App.Container.Resolve<MainPageViewModel>();
-
         
     }
     

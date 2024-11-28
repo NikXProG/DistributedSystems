@@ -3,37 +3,68 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:RGU.DistributedSystems.Labs.WPF.View"
-        xmlns:systemWindowsPresentationCore="clr-namespace:System.Windows;assembly=PresentationCore"
-        xmlns:viewModel="clr-namespace:RGU.DistributedSystems.Labs.WPF.MVVM.ViewModel"
+        xmlns:controls="clr-namespace:RGU.DistributedSystems.Labs.WPF.View.UserControls"
+        xmlns:shell="http://schemas.microsoft.com/winfx/2006/xaml/presentation/shell"
         mc:Ignorable="d"
+        Icon="pack://application:,,,/Assets/icon.png"
         Title="Я ебал собак" 
-        Height="1030"
-        Width="1000"
+        Width="800"
+        Height="830"
+        MouseDown="MainWindow_MouseDownChanged"
         WindowStartupLocation="CenterScreen"
         Background="Transparent"
         AllowsTransparency="True"
         WindowStyle="None"
-        FontSize="25"
         Loaded="MainWindow_OnLoaded">
     
     <Window.Resources>
 
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-
-                <ResourceDictionary Source="../Assets/Styles/Styles.xaml" />
+                <ResourceDictionary Source="../ResourceDictionaries/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="ButtonStateChangedStyle"  TargetType="Button">
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="Foreground" Value="#545454" />
+                <Setter Property="FontFamily" Value="Montserrat" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="OverridesDefaultStyle" Value="True" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Grid>
+                                <Border x:Name="MaskBorder" Background="Black" Opacity="0"></Border>
+                                <Border x:Name="Border"
+                                        Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Border>
+                                
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="MaskBorder" Property="Opacity" Value="0.1" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
         </ResourceDictionary>
+        
     </Window.Resources>
     
-    <Border
-        Background="White"
-        CornerRadius="8" BorderBrush="#DBDBDB"
-        BorderThickness="0.5">
-        <Grid>
+    <controls:ClippedBorder
+        Background="#F3F3F3"
+        CornerRadius="8" BorderBrush="#C8C8C8"
+        BorderThickness="1">
+        <Grid Background="Transparent">
             <Grid.RowDefinitions>
                 <RowDefinition Height="30" />
+                <RowDefinition Height="Auto"/>
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
@@ -49,26 +80,32 @@
                             VerticalAlignment="Center">
 
                     <Image
-                        Source="../Assets/icon.ico"
-                        Height="18" Width="18"
-                        Margin="10,0,7,0" >
+                        Source="../Assets/icon.png"
+                        Width="18"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Margin="5,0" >
                         <RenderOptions.BitmapScalingMode>
                             <BitmapScalingMode>HighQuality</BitmapScalingMode>
                         </RenderOptions.BitmapScalingMode>
                     </Image>
 
 
-                    <TextBlock Text="NotionWPF" x:Name="ApplicationTitle" VerticalAlignment="Center" />
+                    <TextBlock Text="RGU.WPF.Labs"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center" />
                 </StackPanel>
 
                 <Button
                     Grid.Column="1"
                     ToolTip="Свернуть"
                     FontSize="14"
-                 
+                    Style="{ StaticResource ButtonStateChangedStyle}"
+                    Click="MainWindow_StateMinimizeChanged"
                     VerticalContentAlignment="Center"
                     HorizontalContentAlignment="Center"
                     BorderBrush="Transparent"
+                    Background="Transparent"
                     >
 
                     <Button.ContentTemplate>
@@ -85,14 +122,17 @@
                     Grid.Column="2"
                     ToolTip="Развернуть"
                     Content="🗖"
-              
+                    Click="MainWindow_StateMaximizeChanged"
+                    BorderBrush="Transparent"
+                    Background="Transparent"
                     FontSize="14"
+                    Style="{ StaticResource ButtonStateChangedStyle}"
                     >
                     <Button.ContentTemplate>
                         <DataTemplate>
                             <TextBlock Text="🗖" RenderTransformOrigin="0.5,0.5">
                                 <TextBlock.RenderTransform>
-                                    <TranslateTransform Y="-1" />
+                                    <TranslateTransform Y="-2" />
                                 </TextBlock.RenderTransform>
                             </TextBlock>
                         </DataTemplate>
@@ -104,6 +144,7 @@
                     FontFamily="Montserrat"
                     Grid.Column="3"
                     Content="✕"
+                    Click="MainWindow_Closed"
                     FontSize="14"
                     ToolTip="Закрыть">
 
@@ -139,8 +180,11 @@
                     </Button.Style>
                 </Button>
             </Grid>
-            <Frame Grid.Row="1" x:Name="_mainWindowMainFrame"
-                   NavigationUIVisibility="Hidden" />
+            <Separator Background="#EAEAEA" Grid.Row="1"></Separator>
+            <Frame Grid.Row="2"
+                 x:Name="MainWindowMainFrame"
+                 NavigationUIVisibility="Hidden"
+                />
         </Grid>
-    </Border>
+    </controls:ClippedBorder>
 </Window>

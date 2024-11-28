@@ -65,6 +65,7 @@ public partial class App : Application
     private App RegisterPagesViews()
     {
         Container.Register<MainPage>(Reuse.Singleton);
+        Container.Register<CompilerPage>(Reuse.Singleton);
         // TODO OTHER PAGES REGISTER
         return this;
     }
@@ -91,7 +92,6 @@ public partial class App : Application
     private App RegisterWindowsViewModels()
     {
         Container.Register<MainWindowViewModel>(Reuse.Singleton);
-        
         // TODO: REGISTER WINDOW VIEW MODEL IN DI CONTAINER
         
         return this;
@@ -100,7 +100,7 @@ public partial class App : Application
     {
         
         Container.Register<MainPageViewModel>(Reuse.Singleton);
-
+        Container.Register<CompilerPageViewModel>(Reuse.Singleton);
         // TODO: REGISTER PAGES VIEW MODEL IN DI CONTAINER
         return this;
     }
@@ -130,6 +130,8 @@ public partial class App : Application
         navigationManager
             .AddMapping<MainPage, MainPageViewModel>();
             
+        navigationManager
+            .AddMapping<CompilerPage, CompilerPageViewModel>();
         // TODO ADD ADD MAPPING VIEW AND VIEW MODEL
         
         

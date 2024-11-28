@@ -8,7 +8,7 @@ using RGU.DistributedSystems.Labs.WPF.MVVM.ViewModel;
 
 namespace RGU.DistributedSystems.Labs.WPF.Utils;
 
-public class NavigationManager
+internal sealed class NavigationManager
 {
     #region Fields
     
@@ -58,9 +58,34 @@ public class NavigationManager
         ViewModelBase
     {
         _viewTypeToViewMappings.Add(typeof(TViewModel), (_resolver.Resolve(typeof(TView)) as FrameworkElement)!);
+
         return this;
+    }
+    
+    public void Navigate(
+        NavigationContext navigationContext)
+    {
+        _ = _navigationService ?? throw new InvalidOperationException("Navigation service is not initialized");
+
+        if (!_viewTypeToViewMappings.TryGetValue(navigationContext.To, out var view))
+        {
+            throw new ArgumentException("View model type is not registered");
+        }
+
+        var from = (INavigationAware)_resolver.Resolve(navigationContext.From);
+        var to = (INavigationAware)_resolver.Resolve(navigationContext.To);
+
+        from.OnNavigatingFrom(navigationContext);
+        if (navigationContext.Cancelled)
+        {
+            return;
+        }
+        _navigationService.Navigate(view);
+        from.OnNavigatedFrom(navigationContext);
+        to.OnNavigatedTo(navigationContext);
     }
     
     
     #endregion
+    
 }

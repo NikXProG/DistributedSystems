@@ -1,0 +1,119 @@
+<UserControl x:Class="RGU.DistributedSystems.Labs.WPF.View.UserControls.DdMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:RGU.DistributedSystems.Labs.WPF.View.UserControls"
+             mc:Ignorable="d"
+             d:DesignHeight="300" >
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../ResourceDictionaries/ButtonText.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="placeHolder" TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
+              
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type TextBox}">
+                            <Grid>
+                                <TextBox Text="{Binding Path=Text,
+                                                    RelativeSource={RelativeSource TemplatedParent}, 
+                                                    Mode=TwoWay,
+                                                    UpdateSourceTrigger=PropertyChanged}"
+                                         x:Name="textSource" 
+                                         Background="Transparent" 
+                                         Panel.ZIndex="2" />
+                                <TextBox Text="{TemplateBinding Tag}" Background="{TemplateBinding Background}" Panel.ZIndex="1">
+                                    <TextBox.Style>
+                                        <Style TargetType="{x:Type TextBox}">
+                                            <Setter Property="Foreground" Value="Transparent"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Path=Text, Source={x:Reference textSource}}" Value="">
+                                                    <Setter Property="Foreground" Value="LightGray"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBox.Style>
+                                </TextBox>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+       <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"></ColumnDefinition>
+           <ColumnDefinition Width="Auto"></ColumnDefinition>
+           <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBox 
+            Style="{StaticResource placeHolder}"
+            FontSize="25"
+            Tag="example: 1,5,7"
+            Grid.Column="0"></TextBox>
+        <ComboBox Grid.Column="1" FontSize="20" 
+                  FontWeight="Light" 
+                  FontFamily="Roboto" 
+                  SelectedIndex="0"
+                  VerticalContentAlignment="Center"
+                  >
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding}" />
+                        <TextBlock Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=ItemIndex}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+            <ComboBox.Items>
+                <ComboBoxItem 
+                    Content="состояние всех регистров"
+                    ToolTip="вывести состояние всех регистров в системе счисления, которая записана в 1 операнде"></ComboBoxItem>
+                <ComboBoxItem 
+                    ToolTip="поразрядная инверсия над содержимом 1 операнда, результат сохраняется в 3 операнд"
+                    Content="поразрядная инверсия"></ComboBoxItem>
+                <ComboBoxItem
+                    ToolTip="дизъюнкция над 1 и 2 операндом, результат сохраняется в 3 операнд"
+                    Content="дизъюнкция"></ComboBoxItem>
+                <ComboBoxItem
+                    ToolTip="сложение по модулю 2 над 1 и 2 операндом, результат сохраняется в 3 операнд"
+                    Content="конъюнкция"></ComboBoxItem>
+                <ComboBoxItem Content="сложение по модулю"></ComboBoxItem>
+                <ComboBoxItem Content="импликация"></ComboBoxItem>
+                <ComboBoxItem Content="коимпликация"></ComboBoxItem>
+                <ComboBoxItem Content="эквиваленция"></ComboBoxItem>
+                <ComboBoxItem Content="стрелка Пирса"></ComboBoxItem>
+                <ComboBoxItem Content="штрих Шеффера"></ComboBoxItem>
+                <ComboBoxItem Content="сложение"></ComboBoxItem>
+                <ComboBoxItem Content="вычитание"></ComboBoxItem>
+            </ComboBox.Items>
+        </ComboBox>
+        <Button
+            Style="{StaticResource CustomButtonStyle}" 
+            Grid.Column="2" 
+                Background="#2078F9"
+                Foreground="White"
+                BorderBrush="#236FE0"
+                BorderThickness="2"
+                FontSize="20"
+                Padding="20,0"
+            >
+                
+            сompile
+        </Button>
+    </Grid>
+</UserControl>
+
+
+<!--   <Grid VerticalAlignment="Center" Margin="100,0" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <TextBlock  Grid.Row="0" FontSize="30">Compiler program</TextBlock>
+        <controls:DdMenu Grid.Row="1"></controls:DdMenu>
+    </Grid>-->

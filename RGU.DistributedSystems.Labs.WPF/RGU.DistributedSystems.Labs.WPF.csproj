@@ -14,17 +14,67 @@
         <XamlRuntime>Wpf</XamlRuntime>
         <SubType>Designer</SubType>
       </Page>
-      <Page Update="Assets\Styles\StylesComponent\ButtonImage.xaml">
+      <Page Update="ResourceDictionaries\ButtonImage.xaml">
         <Generator>MSBuild:Compile</Generator>
         <XamlRuntime>Wpf</XamlRuntime>
         <SubType>Designer</SubType>
       </Page>
-      <Page Update="Assets\Styles\StylesComponent\ButtonText.xaml">
+      <Page Update="ResourceDictionaries\ScrollViewer.xaml">
         <Generator>MSBuild:Compile</Generator>
         <XamlRuntime>Wpf</XamlRuntime>
         <SubType>Designer</SubType>
       </Page>
-      <Page Update="Assets\Styles\StylesComponent\ScrollViewer.xaml">
+      <Page Update="ResourceDictionaries\ButtonText.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="ResourceDictionaries\Styles.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="View\UserControls\Keyboard\NumericKeyboard.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="View\UserControls\TextBoxLetterKeyboard.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="View\UserControls\TextBoxNumericKeyboard.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="View\UserControls\NumericKeyboard.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="View\UserControls\LetterKeyboard.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="View\UserControls\RussianLetterKeyboard.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="View\UserControls\DialogHost.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="View\UserControls\SpinnerDialog.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="View\UserControls\WidgetDialog.xaml">
         <Generator>MSBuild:Compile</Generator>
         <XamlRuntime>Wpf</XamlRuntime>
         <SubType>Designer</SubType>
@@ -37,18 +87,24 @@
 
     <ItemGroup>
       <PackageReference Include="DryIoc.dll" Version="6.0.0-preview-08" />
+      <PackageReference Include="Edge.WindowChrome" Version="4.0.0" />
+      <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+      <PackageReference Include="Stylet" Version="1.3.7" />
+      <PackageReference Include="System.Windows.Interactivity.WPF" Version="2.0.20525" />
     </ItemGroup>
 
     <ItemGroup>
       <None Remove="Assets\AppIcon.ico" />
       <None Remove="Assets\Images\image.jpg" />
-      <Resource Include="Assets\Images\image.jpg" />
-      <None Remove="View\Pages\w.jpg" />
-      <Resource Include="View\Pages\w.jpg" />
-      <None Remove="Assets\Images\button_image.jpg" />
-      <Resource Include="Assets\Images\button_image.jpg" />
-      <None Remove="Assets\Images\button_image.png" />
-      <Resource Include="Assets\Images\button_image.png" />
+      <None Remove="Assets\Pages\w.jpg" />
+      <Resource Include="Assets\image.jpg" />
+      <None Remove="Assets\button_image.jpg" />
+      <None Remove="Assets\button_image.png" />
+      <None Remove="Assets\icon.ico" />
+      <None Remove="Assets\ico.png" />
+      <None Remove="Assets\icon.png" />
+      <Resource Include="Assets\icon.png" />
     </ItemGroup>
 
 </Project>

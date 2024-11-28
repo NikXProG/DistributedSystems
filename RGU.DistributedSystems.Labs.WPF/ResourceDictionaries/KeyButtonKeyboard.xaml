@@ -1,0 +1,37 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:RGU.DistributedSystems.Labs.WPF.View.UserControls"
+                    xmlns:attachedProperties="clr-namespace:RGU.DistributedSystems.Labs.WPF.View.AttachedProperties">
+    
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../../ResourceDictionaries/ButtonText.xaml"></ResourceDictionary>
+    </ResourceDictionary.MergedDictionaries>
+    
+    <Style TargetType="Viewbox">
+        <Setter Property="Width" Value="20"/>
+        <Setter Property="Height" Value="20"/>
+    </Style>
+
+    <Style TargetType="Path">
+        <Setter Property="Fill" Value="Black"/>
+    </Style>
+    
+    <Style x:Key="KeyboardCharacterStyle" 
+           TargetType="Button"
+           BasedOn="{StaticResource CustomButtonStyle}">
+        <Setter Property="Background" Value="{Binding BackgroundKey, ElementName=Keyboard}"></Setter>
+        <Setter Property="Foreground" Value="{Binding ForegroundKey, ElementName=Keyboard}"></Setter>
+        <Setter Property="Margin" Value="{Binding RowSpacing, ElementName=Keyboard}" />
+        <Setter Property="FontSize" Value="{Binding FontSizeKey, ElementName=Keyboard}"></Setter>
+        <Setter Property="Padding" Value="{Binding KeyPadding, ElementName=Keyboard}"></Setter>
+        <Setter Property="attachedProperties:Border.CornerRadius" Value="5.0"></Setter>
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="Width" Value="Auto" />
+        
+                
+    </Style>
+    
+    
+</ResourceDictionary>
